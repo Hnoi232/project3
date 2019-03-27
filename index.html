@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/masongram.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Caramela Coffee</title>
+</head>
+
+<body>
+    <span id="transparent"></span>
+    <div class="container-fluid">
+        <div class="row" id="header">
+            <div class="col-md-12 center" id="logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div id="currentUser"> <div id="logout"><a href="">Log Out <img src="img/logout.svg" alt=""></a></div> <p></p></div>
+            <div id="login"><a href="#">Login <img src="img/login-key.svg" alt=""></a></div>
+            <div class="col-md-12 center">
+                <nav>
+                    
+                    <ul>
+                        <li><a href="#" data-target="menu" class="active">Menu</a></li>
+                        <li><a href="#" data-target="offers">Offers</a></li>
+                        <li><a href="#" data-target="gallery">Gallery</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 center">
+                <!-- Sections -->
+                <!-- Menu Section -->
+                <div class="content" id="menu">
+                    <section>
+                        <h3>Our Menu</h3>
+                        <div class="container">
+                            <div class="row item">
+                                <div class="col-md-4 item-name">Spanish Latte</div>
+                                <div class="col-md-4 dots"></div>
+                                <div class="col-md-2 price">12 SAR</div>
+                            </div>
+                            <div class="row item">
+                                <div class="col-md-4 item-name">White Mocha</div>
+                                <div class="col-md-4 dots"></div>
+                                <div class="col-md-2 price">11 SAR</div>
+                            </div>
+                            <div class="row item">
+                                <div class="col-md-4 item-name">Ameriacno</div>
+                                <div class="col-md-4 dots"></div>
+                                <div class="col-md-2 price">7 SAR</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- # Menu -->
+                <!-- Offers Section -->
+                <div class="content hidden" id="offers">
+                    <section>
+                        <h3>Offers & Promotions</h3>
+                        <div id="addNewOffer">Add New Offer <img src="img/add-offer.svg" alt=""></div>
+                        <div class="container">
+                            <div class="loading">
+                                <img src="img/loading.gif" alt="">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- #Offers Section -->
+                <!-- Gallery Section -->
+                <div class="content hidden" id="gallery">
+                    <section>
+                        <h3>Gallery</h3>
+                        <div class="container">
+                            <div id="photos">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- #Gallery Section -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CRUD -->
+    	<!-- List Section -->
+    	<div class="content hidden" id="gallery">
+    	    <section>
+    	        <h3>Gallery</h3>
+    	        <div class="container">
+    	            <div id="photos">
+    	            </div>
+    	        </div>
+    	    </section>
+    	</div>
+    	<!-- #Gallery Section -->
+    <!-- #CRUD -->
+    <footer>
+        <p>All Rights Reserved (®) 2019</p>
+    </footer>
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> <img src="img/login-key.svg" alt=""> Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                        <label for=""> User Name</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label  >Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="loginButton" type="button" class="btn btn-primary">Login</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #login Modal -->
+
+    <!-- New Offer Modal -->
+    <div id="addNewOfferModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> <img src="img/add-offer-green.svg" alt="">   Add New Offer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                        <label for="">Offer Text</label>
+                            <input type="text" class="form-control" id="offerText"  placeholder="Enter Offer">
+                        </div>
+                        <div class="form-group">
+                            <label >Discount Percentage %</label>
+                            <input type="number" class="form-control" id="percentage" placeholder="Enter Discount Percentage">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="saveOffer" type="button" class="btn btn-success">Save</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #New Offer Modal-->
+
+    <!-- Edit Offer Modal -->
+    <div id="editOfferModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> <img src="img/edit.svg" alt="">   Update Offer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                        <label for="">Offer Text</label>
+                            <input type="text" class="form-control" id="currentOfferText"  placeholder="Enter Offer">
+                        </div>
+                        <div class="form-group">
+                            <label >Discount Percentage %</label>
+                            <input type="number" class="form-control" id="currentPercentage" placeholder="Enter Discount Percentage">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="updateOffer" type="button" class="btn btn-success">Update</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #Edit Offer Modal-->
+    <!-- 
+		jQuery Library from jQuery CDN :
+		https://code.jquery.com/
+	-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- #jQuery Library-->
+    <!-- ***** Gallery stuff ***** -->
+    <!-- 
+		Bootstrap Script from  :
+		https://getbootstrap.com/docs/4.3/getting-started/download/
+	-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- #Bootstrap Script -->
+   
+
+
+    <!-- Gallery Stuff -->
+    <!-- Masonry image display : required for masngram Instagram script- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js"></script>
+    <!-- #Masonry image display -->
+   
+    <!-- Image loading lib : required for masngram Instagram script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <!-- #Image loading lib -->
+   
+    <!-- Masongram Instagram Photos Library : Library to retrieve and display Instagram Photos -->
+    <script src="js/masongram.min.js"></script>
+    <!-- Masongram Instagram Photos Library -->
+    <!-- ***** #Gallery Stuff ***** -->
+   
+
+
+    <!-- ***** Firebase scripts ***** -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <!-- ***** #Firebase scripts ***** -->
+    <!-- App custom script -->
+    <script src="js/firebase-custom-functions.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- App custom script -->
+</body>
+
+</html>

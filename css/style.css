@@ -1,0 +1,233 @@
+html { 
+  background: url(../img/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body{
+	background: none;
+}
+.center{
+	text-align:center;
+	margin-right: 0px;
+}
+nav{
+	display: inline-block;
+	text-align: center;
+	margin-left: 30px;
+}
+nav ul{
+	margin: 0;
+	padding: 0;
+}
+nav ul li{
+	display:inline-block;
+	 
+	margin-right:20px;
+}
+#logo{
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+.dots{overflow: hidden;}
+.item{padding: 7px 0px;}
+.item-name{
+	text-align: right;
+	
+}
+
+.price{
+	text-align: left;
+}
+
+.container-fluid {
+padding:0px;
+}
+
+section{
+	padding: 30px 10px;
+	background: #ffffff9e;
+	margin: 0 auto;
+	display: inline-block;
+	width: 100%;
+}
+#header{
+	padding-bottom: 20px;
+}
+
+#header nav a{color: #45240f;text-transform: uppercase;}
+#header nav a.active{color:#132d4e; border-bottom: 2px solid #132d4e;padding: 0px 1px;}
+#header nav a:hover{
+	color:#faae5c;
+	text-decoration:none;
+	border-color:#faae5c;
+}
+#transparent{
+	background: #ffffffc7;
+	position: fixed;
+	width:100%;
+	height: 100%;
+	z-index: -7;
+}
+
+
+footer {
+    width:100%;
+    text-align:center;
+    font-size:12px;
+    margin-top:20px;
+
+}
+
+.offer-item{
+	/* background: #1A2E4E; */
+	max-width: 400px;
+	margin: 0 auto;
+	margin-bottom: 18px;
+	border-radius: 8px;
+	position: relative;
+	height: 65px;
+}
+
+.offer-item a.coupon{
+    display: inline-block;
+    /* float: right; */
+    text-align: left;
+    width: 100%;
+    padding-left: 67px;
+    padding-top: 18px;
+    text-decoration: none;
+    background: #1A2E4E;
+    border-radius: 10px;
+}
+
+.offer-item span {
+    position: absolute;
+    right: 0px;
+    top: 18px;
+    right: 16px;
+    background: #dd5877;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+.offer-item a.coupon:hover{
+	background: #244d82;
+}
+.offer-item a.coupon img{
+    position: absolute;
+    left: 8px;
+    top: 8px;
+}
+.offer-item a.coupon p{
+    color: #fff;
+}
+
+.hidden{
+	display:none;
+}
+
+#photos{
+	display: block;
+    /* height: 520px; */
+    margin: 0 auto;
+    width: 100%;
+    height: -webkit-fill-available;
+}
+
+#login,#currentUser{
+	position: absolute;
+	top:10px;
+	left:10px;
+
+
+}
+#login a,#logout a{
+color:#132d4e;
+padding:10px;
+-webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+#login a:hover, #logout a:hover{
+	background: #eee;
+	border-radius: 5px;
+	text-decoration: none;
+
+}
+
+a.edit {
+    position: absolute;
+    right: -28px;
+    top: 22px;
+    display: none;
+    cursor: pointer;
+}
+
+a.delete {
+    position: absolute;
+    right: -28px;
+    top: -3px;
+    display: none;   
+    cursor: pointer;
+}
+a.delete:hover {
+	 top: -2px;
+}
+a.delete:active{
+	zoom:.9;
+	top:-1px
+} 
+
+a.edit:hover {
+	 top: 23px;
+}
+a.edit:active{
+	zoom:.9;
+	top:25px
+} 
+
+#addNewOffer{
+	background: green;
+	width: 180px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 11px;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	display:none;
+}
+.logged-in #addNewOffer{
+	display:inline-block;
+}
+.logged-in #login{
+	display:none;
+}
+#currentUser{
+	display: none
+}
+.logged-in #currentUser{
+	display: inline-block;;
+	}
+#addNewOffer img{
+    right: -10px;
+    position: relative;
+    top: -1px;
+
+}
+.logged-in a.edit,.logged-in a.delete {
+	display: inline-block;
+}
+
+.content .container{
+	margin-top:60px;
+}
+
+.transparent{
+	opacity:.5;
+}
+
